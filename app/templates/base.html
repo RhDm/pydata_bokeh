@@ -1,0 +1,62 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}Flask App with Bokeh{% endblock %}
+
+{% block head %}
+{{ super() }}
+
+<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-1.1.0.min.css" type="text/css" />
+<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-widgets-1.1.0.min.css" type="text/css" />
+
+<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-1.1.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-1.1.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-api-1.1.0.min.js"></script>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type= "text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+{% endblock %}
+
+
+{% block navbar %}
+<div class="container">
+    <div class="row content">
+        <section class="header">
+            <nav class="navbar-default1">
+                <div class="header-container">
+                <ul class="menu-nav header-menu">
+                    <li class= nav-link {% if request.path == '/' %}class="active"{% endif %}><a style='text-decoration:none;' href="{{ url_for('main.index') }}">Home</a></li>
+                    <li class= nav-link {% if request.path == '/plot_1' %}class="active"{% endif %}><a style='text-decoration:none;' href="{{ url_for('plot_1.plot_1') }}">Vis 1</a></li>
+                    <li class= nav-link {% if request.path == '/plot_2' %}class="active"{% endif %}><a style='text-decoration:none;' href="{{ url_for('plot_2.bkapp_page') }}">Vis 2</a></li>
+                    <li class= nav-link {% if request.path == '/plot_3' %}class="active"{% endif %}><a style='text-decoration:none;' href="{{ url_for('plot_3.bkapp_page') }}">Vis 3</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+</div>
+</div>
+
+<div class="container ">
+        <section class="col-lg-12">
+
+            {% endblock %}
+
+
+            {% block content %}
+
+
+            {% block page_content %}{% endblock %}
+
+
+        </section>
+
+        <!-- footer -->
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% set active_page = "plot_2" %}
+
+{% block title %}Flask App with Bokeh{% endblock %}
+
+
+{% block head %}
+{{ super() }}
+
+
+{% endblock %}
+
+
+{% block page_content %}
+<div class="page-header text-left">
+  <h1>Gamma PDF</h1>
+</div>
+
+<script type="text/javascript">
+
+  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+
+</script>
+
+
+<!-- Bokeh embedding start -->
+ <div align="center" style="padding: 40px;">
+  {{ script_vis|safe }}
+  {{ div|safe }}
+</div>
+<!-- Bokeh embedding end -->
+
+
+
+{% endblock %}
+{% block scripts %}
+
+{{ super() }}
+{{ moment.include_moment() }}
+{% endblock %}
