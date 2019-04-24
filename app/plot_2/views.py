@@ -59,7 +59,7 @@ def gamma_shape(doc):
     p.line(x='x_1', y='y_1', line_width=2, source= source)
     
     p.x_range.start = 0
-    p.xaxis.axis_label = 'Gamm random variable'
+    p.xaxis.axis_label = 'Random variable'
     p.yaxis.axis_label ='Probability density'
 
     def callback_shape(attr, old, new):
