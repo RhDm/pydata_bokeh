@@ -1,8 +1,6 @@
 ## PyData Meetup talk on [Bokeh](https://bokeh.pydata.org/en/latest/)
 ### April 2019
 
-------LINUX/MACOS LOCAL DEV DEPLOYMENT------
-
 1. clone the repository
 ```
 git clone https://github.com/RhDm/pydata_bokeh.git
