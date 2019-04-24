@@ -16,19 +16,15 @@ from numpy import cos, linspace
 from flask_cors import CORS
 
 app = Flask(__name__)
-# CORS enabled so react frontend can pull data from python backend
 CORS(app)
 
 @app.route('/')
-def hello_world():
+def home():
     return ''
 
 
 @app.route('/plot')
 def plot():
-    # copy/pasted from Bokeh 'JavaScript Callbacks' - used as an example
-    # https://bokeh.pydata.org/en/latest/docs/user_guide/interaction/callbacks.html
-
     alpha=3
     x = np.linspace(gamma.ppf(0.01, alpha), gamma.ppf(0.99, alpha), 100)
     y= gamma.pdf(x, alpha)
