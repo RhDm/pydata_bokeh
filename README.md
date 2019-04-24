@@ -1,11 +1,11 @@
 ## PyData Meetup talk on [Bokeh](https://bokeh.pydata.org/en/latest/)
 ### April 2019
 
-1. clone the repository
+1. clone the repository:
 ```
 git clone https://github.com/RhDm/pydata_bokeh.git
 ```
-2. cd to the `pydata_bokeh`
+2. cd to `pydata_bokeh`
 
 4. create a new python environment (very much recommended; you can also try it with Python 3.7):
 ```
@@ -22,24 +22,28 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-7. **start jupyter and open the `bokeh.ipynb` notebook**
+7. **start jupyter:**
 ```
 jupyter notebook
 ```
-it is possible that the plots with interactions (sliders and buttons) will not work and the Bokeh will complain, to fix it try executing
+and open the `bokeh.ipynb` notebook
+
+
+it is possible that the plots with interactions (sliders and buttons) will not work and the Bokeh will complain, to fix it try executing:
 ```
 export BOKEH_ALLOW_WS_ORIGIN=*
 ```
 as an alternative, you can add this line to your `.bash_profile` for the permanent effect
 
-8. **start Flask app**
+8. **start Flask app:**
 ```
 python flask_app.py
 ```
 and open `http://127.0.0.1:5000/` in your browser
 
 8. **start Bokeh server**
-cd to `bokeh_server`
+
+cd to `bokeh_server` and start the server:
 ```
 python flask_bokeh_server.py
 ```
