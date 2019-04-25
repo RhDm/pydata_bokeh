@@ -29,7 +29,7 @@ jupyter notebook
 and open the `bokeh.ipynb` notebook
 
 
-it is possible that the plots with interactions (sliders and buttons) will not work and the Bokeh will complain, to fix it try executing:
+it is possible that the plots with interactions (sliders and buttons) will not work and Bokeh will complain, to fix it try executing:
 ```
 export BOKEH_ALLOW_WS_ORIGIN=*
 ```
